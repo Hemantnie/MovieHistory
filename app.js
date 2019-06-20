@@ -15,14 +15,26 @@ const imgURLList = [
 ]
 var index = 0;
 
+class Movie{
+    constructor(name,url){
+        this.name = name;
+        this.url = url;
+    }
+    getName(){
+        return this.name;
+    }
+    getURL(){
+        return this.url;
+    }
+}
 button.addEventListener('click',()=>{
     if(imgURLList.length > index){
         let outerDiv = document.createElement('div');
         let imgTag = document.createElement('img');
         imgTag.setAttribute('src',imgURLList[index]);
         outerDiv.appendChild(imgTag);
-        // content.appendChild(outerDiv);
         content.prepend(outerDiv);
         index+=1;
     }
 });
+
