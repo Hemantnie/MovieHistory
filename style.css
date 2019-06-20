@@ -28,6 +28,7 @@ img{
 }
 
 #modal{
+    display: none;
     position: absolute;
     top: 102px;
     left: 38%;

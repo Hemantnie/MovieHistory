@@ -1,5 +1,8 @@
 const content = document.getElementById("content");
 const button = document.getElementById("button");
+const modal = document.getElementById("modal");
+const submit = document.getElementById("submit");
+const cancel = document.getElementById("cancel");
 const imgURLList = [
 "https://vignette.wikia.nocookie.net/jamesbond/images/9/95/SPECTRE_poster_1.jpg/revision/latest?cb=20150916083032",
 "https://dbpost.com/wp-content/uploads/2018/09/Sholay.jpg",
@@ -28,6 +31,7 @@ class Movie{
     }
 }
 button.addEventListener('click',()=>{
+    modal.style.display = "block";
     if(imgURLList.length > index){
         let outerDiv = document.createElement('div');
         let imgTag = document.createElement('img');
